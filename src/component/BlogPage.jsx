@@ -12,7 +12,7 @@ const BlogPage = () => {
   const [ActiveCategory, setActiveCategory] = useState(null);
   useEffect(() => {
     async function fetchBlogs() {
-      let url = `http://localhost:5000/blogs?page=${currentPage}&limit=${pageSize}`;
+      let url = `https://dailydoseblog.onrender.com/blogs?page=${currentPage}&limit=${pageSize}`;
 
       //filter by category::
       if (category) {

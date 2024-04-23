@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const SideBar = () => {
   const [popular, setPopular] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/blogs")
+    fetch("https://dailydoseblog.onrender.com/blogs")
       .then((res) => res.json())
       .then((data) => setPopular(data.slice(0, 15)));
   }, []);
