@@ -1,7 +1,9 @@
 const express = require("express");
+const serverless = require("serverless-http");
 const cors = require("cors");
 const blogs = require("./api/blogsData.json");
 const port = process.env.PORT || 5000;
+const router = express.Router();
 
 const app = express();
 
@@ -9,15 +11,15 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get("/", (req, res) => {
+router.get("/", (req, res) => {
   res.send("Blog server is running!");
 });
 
-app.get("/blogs", (req, res) => {
+router.get("/blogs", (req, res) => {
   res.json(blogs); // Return JSON instead of sending directly
 });
 
-app.get("/blogs/:id", (req, res) => {
+router.get("/blogs/:id", (req, res) => {
   const id = parseInt(req.params.id);
   const blog = blogs.find((b) => b.id === id); // Use find instead of filter for single item
   if (blog) {
@@ -30,3 +32,6 @@ app.get("/blogs/:id", (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
+
+app.use("/api/blogsData", router);
+module.exports.handler = serverless(app);
