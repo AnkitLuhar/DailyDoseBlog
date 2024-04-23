@@ -38,7 +38,8 @@ const router = createBrowserRouter([
         path: "/blogs/:id",
         element: <SinglePage />,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/blogs/${params.id}`),
+          fetch(`https://dailydoseblog.onrender.com/blogs/${params.id}`),
+        // fetch(`http://localhost:5000/blogs/${params.id}`),
       },
     ],
   },
