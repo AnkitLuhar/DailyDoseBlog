@@ -1,8 +1,11 @@
-# React + Vite
+#DailyDose(Blog)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#Tech-Stack:
+1>TAILWIND CSS
+2>REACT JS
+3>NODE JS
+4>EXPRESS JS
 
-Currently, two official plugins are available:
+#TO CHECK THE ALL THE RAW-DATA  OF THE BLOG,GO TO THE LIVE-SERVER,HERE IS THE LINK :https://dailydoseblog.onrender.com
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
